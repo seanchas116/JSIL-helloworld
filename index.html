@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>JSIL Hello World</title>
+</head>
+<body onload="onLoad()">
+  <script>
+    window.jsilConfig = {
+      libraryRoot: "file:///Users/seanchas116/Repos/JSIL/Libraries/",
+      manifests: ["test.exe"],
+    };
+  </script>
+  <script src="file:///Users/seanchas116/Repos/JSIL/Libraries/JSIL.js"></script>
+  <script>
+    function runMain() {
+      const asm = JSIL.GetAssembly("test");
+      JSIL.InvokeEntryPoint(asm, []);
+    }
+  </script>
+</body>
+</html>
